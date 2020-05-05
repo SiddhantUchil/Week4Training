@@ -34,3 +34,24 @@ my_pois <- replicate(100, rpois(5,10))
 my_pois
 cm <- colMeans(my_pois)
 hist(cm)
+
+data(cars)
+?cars
+head(cars)
+plot(cars)
+?plot
+plot(x = cars$speed, y = cars$dist)
+plot(x = cars$dist, y = cars$speed)
+plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")
+plot(x = cars$speed, y = cars$dist, ylab = "Stopping Distance", main = "My Plot")
+plot(cars, main = "My Plot", sub = "My Plot Subtitle")
+plot(cars, sub = "My Plot Subtitle")
+plot(cars, col = 2)
+plot(cars, xlim = c(10, 15))
+plot(cars, pch = 2)
+data(mtcars)
+str(mtcars)
+?boxplot
+boxplot(mpg ~ cyl, data = mtcars)
+hist(mtcars$hp)
+hist(mtcars$mpg)
